@@ -14,5 +14,7 @@ RUN apt-get update && apt-get install -y \
 
 # Instalar Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+COPY --chown=www-data:www-data . /var/www/backend
+
 
 WORKDIR /var/www/backend
