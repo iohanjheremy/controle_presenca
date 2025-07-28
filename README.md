@@ -37,6 +37,7 @@ docker exec -it php php bin/console doctrine:migrations:migrate
 # Acessar container
 docker exec -it php bash
 
+```bash
 
 🌐 Endpoints
 API disponível em: http://localhost:8080/api
