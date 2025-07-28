@@ -7,13 +7,13 @@ Projeto dividido em dois repositórios:
 
 - ## 📁 Estrutura do Projeto
 
-/
-├── backend/ # Projeto Symfony
-├── frontend/ # Projeto React (Vite)
-├── docker/ # Configurações customizadas para PHP e Nginx
-│ ├── php/
-│ └── nginx/
-└── docker-compose.yaml
+/ <br>
+├── backend/ # Projeto Symfony <br>
+├── frontend/ # Projeto React (Vite) <br>
+├── docker/ # Configurações customizadas para PHP e Nginx <br>
+│ ├── php/ <br>
+│ └── nginx/ <br>
+└── docker-compose.yaml <br>
 
 ---
 
