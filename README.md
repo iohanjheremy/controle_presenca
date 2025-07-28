@@ -1,85 +1,123 @@
-# 📚 Sistema de Controle de Presença
+# 🎓 Sistema de Controle de Presença
 
-Projeto dividido em dois repositórios:
+Projeto com arquitetura fullstack usando:
 
-- **Frontend (React.js):** [controle_presenca](https://github.com/iohanjheremy/controle_presenca)
-- **Backend (Symfony):** [backend](https://github.com/iohanjheremy/backend)
-<br><br>
+- **Backend:** Symfony + MySQL  
+- **Frontend:** React.js (Vite)  
+- **Gerenciamento:** Docker + Docker Compose
+
+---
 
 ## 📁 Estrutura do Projeto
 
-/ <br>
-├── backend/ # Projeto Symfony <br>
-├── frontend/ # Projeto React (Vite) <br>
-├── docker/ # Configurações customizadas para PHP e Nginx <br>
-│ ├── php/ <br>
-│ └── nginx/ <br>
-└── docker-compose.yaml <br>
+```
+/
+├── backend/         # Projeto Symfony
+├── frontend/        # Projeto React (Vite)
+├── docker/          # Configurações customizadas para PHP e Nginx
+│   ├── php/
+│   └── nginx/
+└── docker-compose.yaml
+```
 
 ---
-<br><br>
+
 ## 🐳 Como rodar o projeto com Docker
 
 ### 🔧 Pré-requisitos
 
-- Docker instalado ([instalar Docker](https://docs.docker.com/get-docker/))
-- Docker Compose instalado (normalmente já incluso no Docker Desktop)
+- Docker + Docker Compose instalados  
+  👉 [Guia oficial de instalação](https://docs.docker.com/get-docker/)
 
 ---
 
-<br><br>
-## 🔙 Backend (Symfony)
+### ▶️ Passos para iniciar
 
-### 📁 Clone o repositório
-```bash
-git clone https://github.com/iohanjheremy/backend.git
-cd backend
-```
-<br>
+1. Clone o projeto:
 
-▶️ Rodar com Docker
-```bash
-docker-compose up --build -d
-```
-<br><br>
-
-## 💡 Comandos úteis
-- Instalar dependências PHP
-```bash
-docker exec -it php bash -c "composer install"
-```
-<br>
-
-- Rodar migrations
-```bash
-docker exec -it php php bin/console doctrine:migrations:migrate
-```
-<br>
-
-- Acessar container
-```bash
-docker exec -it php bash
-```
----
-<br><br>
-
-## 🌐 Endpoints
-API disponível em: http://localhost:8080/api <br>
-Documentação Swagger: http://localhost:8080/api/docs
-
----
-
-<br><br>
-## 🔜 Frontend (React.js)
-### 📁 Clone o repositório
 ```bash
 git clone https://github.com/iohanjheremy/controle_presenca.git
 cd controle_presenca
 ```
-<br>
 
-▶️ Rodar com Docker
+2. Execute o Docker Compose:
+
 ```bash
-docker build -t controle_presenca_frontend .
-docker run -d -p 3000:3000 --name frontend_app controle_presenca_frontend
+docker-compose up --build -d
 ```
+
+Aguarde alguns instantes até os containers estarem todos funcionando.
+
+---
+
+## 🌐 Acesso às aplicações
+
+| Serviço   | URL                       | Porta |
+|-----------|---------------------------|-------|
+| Frontend  | http://localhost:5173     | 5173  |
+| Backend   | http://localhost:8080     | 8080  |
+| MySQL     | localhost:3306 (externo)  | 3306  |
+
+> ⚠️ Certifique-se de que a API do backend está acessível antes de usar o frontend.
+
+---
+
+## 🔙 Backend - Symfony
+
+📂 Local: `./backend`
+
+### Comandos úteis:
+
+```bash
+# Acessar o container PHP
+docker exec -it symfony-php bash
+
+# Instalar dependências
+composer install
+
+# Rodar migrations
+php bin/console doctrine:migrations:migrate
+
+# Rodar servidor Symfony (não necessário, pois usamos nginx)
+symfony server:start
+```
+
+### 📄 Variável `.env`
+
+No backend, o arquivo `.env` deve conter:
+
+```ini
+DATABASE_URL="mysql://symfony:symfony@db:3306/controle_presenca"
+```
+
+---
+
+## 🔜 Frontend - React (Vite)
+
+📂 Local: `./frontend`
+
+A aplicação React é servida automaticamente via Docker com o comando:
+
+```bash
+npm run dev
+```
+
+### 📄 Variável `.env` (no diretório `frontend`)
+
+Crie o arquivo `.env` com o seguinte conteúdo:
+
+```bash
+VITE_API_URL=http://localhost:8080/api
+```
+
+---
+
+## 🧑‍💻 Autor
+
+- [@iohanjheremy](https://github.com/iohanjheremy)
+
+---
+
+## 📃 Licença
+
+MIT
