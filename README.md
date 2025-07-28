@@ -51,7 +51,7 @@ cd ..
 ```bash
 cd controle_presenca
 docker-compose build
-docker-compose up
+docker-compose up -d
 ```
 
 Aguarde alguns instantes até os containers estarem todos funcionando.
