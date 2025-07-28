@@ -28,7 +28,7 @@ cd backend
 docker-compose up --build -d
 ```
 
-##💡 Comandos úteis
+## 💡 Comandos úteis
 - Instalar dependências PHP
 ```bash
 docker exec -it php bash -c "composer install"
