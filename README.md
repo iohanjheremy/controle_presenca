@@ -58,19 +58,6 @@ Aguarde alguns instantes até os containers estarem todos funcionando.
 
 ---
 
-## 🌐 Acesso às aplicações
-
-| Serviço   | URL                             | Porta |
-|-----------|---------------------------------|-------|
-| Frontend  | http://localhost:5173           | 5173  |
-| Backend   | http://localhost:8080           | 8080  |
-| Endpoints | http://localhost:8080/api/doc  | 8080  |
-| MySQL     | localhost:3306 (externo)        | 3306  |
-
-> ⚠️ Certifique-se de que a API do backend está acessível antes de usar o frontend.
-
----
-
 ## 🔙 Backend - Symfony
 
 📂 Local: `./backend`
@@ -118,6 +105,19 @@ Crie o arquivo `.env` com o seguinte conteúdo:
 ```bash
 VITE_API_URL=http://localhost:8080/api
 ```
+
+---
+
+## 🌐 Acesso às aplicações
+
+| Serviço   | URL                             | Porta |
+|-----------|---------------------------------|-------|
+| Frontend  | http://localhost:5173           | 5173  |
+| Backend   | http://localhost:8080           | 8080  |
+| Endpoints | http://localhost:8080/api/doc  | 8080  |
+| MySQL     | localhost:3306 (externo)        | 3306  |
+
+> ⚠️ Certifique-se de que a API do backend está acessível antes de usar o frontend.
 
 ---
 
