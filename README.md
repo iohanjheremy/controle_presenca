@@ -28,23 +28,23 @@ cd backend
 docker-compose up --build -d
 ```
 
-💡 Comandos úteis
-## Instalar dependências PHP
+##💡 Comandos úteis
+- Instalar dependências PHP
 ```bash
 docker exec -it php bash -c "composer install"
 ```
-## Rodar migrations
+- Rodar migrations
 ```bash
 docker exec -it php php bin/console doctrine:migrations:migrate
 ```
 
-## Acessar container
+- Acessar container
 ```bash
 docker exec -it php bash
 ```
 
 🌐 Endpoints
-API disponível em: http://localhost:8080/api
+API disponível em: http://localhost:8080/api <br>
 Documentação Swagger: http://localhost:8080/api/docs
 
 🔜 Frontend (React.js)
