@@ -20,7 +20,6 @@ Projeto dividido em dois repositórios:
 
 ### 📁 Clone o repositório
 
-```bash
 git clone https://github.com/iohanjheremy/backend.git
 cd backend
 
