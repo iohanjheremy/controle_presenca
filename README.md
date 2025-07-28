@@ -40,7 +40,12 @@ git clone https://github.com/iohanjheremy/controle_presenca.git
 cd controle_presenca
 ```
 
-2. Execute o Docker Compose:
+2. Clone o Backend:
+```bash
+[git clone https://github.com/iohanjheremy/controle_presenca.git](https://github.com/iohanjheremy/backend.git)
+```
+
+3. Execute o Docker Compose:
 
 ```bash
 docker-compose up --build -d
