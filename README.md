@@ -50,7 +50,7 @@ cd ..
 
 ```bash
 cd controle_presenca
-docker-compose build -d
+docker-compose build
 docker-compose up
 ```
 
