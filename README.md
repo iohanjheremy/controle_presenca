@@ -23,10 +23,13 @@ Projeto dividido em dois repositórios:
 git clone https://github.com/iohanjheremy/backend.git
 cd backend
 ```
+<br>
+
 ▶️ Rodar com Docker
 ```bash
 docker-compose up --build -d
 ```
+<br><br>
 
 ## 💡 Comandos úteis
 - Instalar dependências PHP
