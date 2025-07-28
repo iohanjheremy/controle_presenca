@@ -3,7 +3,8 @@
 Projeto dividido em dois repositórios:
 
 - **Frontend (React.js):** [controle_presenca](https://github.com/iohanjheremy/controle_presenca)
-- **Backend (Symfony):** [backend](https://github.com/iohanjheremy/backend) <br>
+- **Backend (Symfony):** [backend](https://github.com/iohanjheremy/backend)
+<br><br>
 
 ## 📁 Estrutura do Projeto
 
