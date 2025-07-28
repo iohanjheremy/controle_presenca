@@ -17,7 +17,7 @@ Projeto dividido em dois repositórios:
 └── docker-compose.yaml <br>
 
 ---
-
+<br><br>
 ## 🐳 Como rodar o projeto com Docker
 
 ### 🔧 Pré-requisitos
@@ -27,6 +27,7 @@ Projeto dividido em dois repositórios:
 
 ---
 
+<br><br>
 ## 🔙 Backend (Symfony)
 
 ### 📁 Clone o repositório
