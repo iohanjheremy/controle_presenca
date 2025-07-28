@@ -19,11 +19,11 @@ COPY --chown=www-data:www-data . /var/www/backend
 
 WORKDIR /var/www/backend
 
-COPY ./backend/composer.json ./backend/composer.lock* ./
+COPY backend/composer.json backend/composer.lock* ./
 
 RUN composer install --no-interaction --prefer-dist --optimize-autoloader
 
 # Copiar o restante do projeto
-#COPY ./backend .
+COPY backend ./
 
 CMD ["php-fpm"]
