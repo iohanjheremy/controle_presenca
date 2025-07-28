@@ -33,19 +33,24 @@ docker-compose up --build -d
 ```bash
 docker exec -it php bash -c "composer install"
 ```
+<br>
+
 - Rodar migrations
 ```bash
 docker exec -it php php bin/console doctrine:migrations:migrate
 ```
+<br>
 
 - Acessar container
 ```bash
 docker exec -it php bash
 ```
+---
 
-🌐 Endpoints
+## 🌐 Endpoints
 API disponível em: http://localhost:8080/api <br>
 Documentação Swagger: http://localhost:8080/api/docs
+<br>
 
 🔜 Frontend (React.js)
 📁 Clone o repositório
@@ -53,6 +58,7 @@ Documentação Swagger: http://localhost:8080/api/docs
 git clone https://github.com/iohanjheremy/controle_presenca.git
 cd controle_presenca
 ```
+<br>
 
 ▶️ Rodar com Docker
 ```bash
