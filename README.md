@@ -54,8 +54,8 @@ docker exec -it php bash
 API disponível em: http://localhost:8080/api <br>
 Documentação Swagger: http://localhost:8080/api/docs
 <br>
-
-
+---
+<br><br>
 🔜 Frontend (React.js)
 📁 Clone o repositório
 ```bash
