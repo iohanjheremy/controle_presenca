@@ -52,11 +52,12 @@ Aguarde alguns instantes até os containers estarem todos funcionando.
 
 ## 🌐 Acesso às aplicações
 
-| Serviço   | URL                       | Porta |
-|-----------|---------------------------|-------|
-| Frontend  | http://localhost:5173     | 5173  |
-| Backend   | http://localhost:8080     | 8080  |
-| MySQL     | localhost:3306 (externo)  | 3306  |
+| Serviço   | URL                             | Porta |
+|-----------|---------------------------------|-------|
+| Frontend  | http://localhost:5173           | 5173  |
+| Backend   | http://localhost:8080           | 8080  |
+| Endpoints | http://localhost:8080/api/docs  | 8080  |
+| MySQL     | localhost:3306 (externo)        | 3306  |
 
 > ⚠️ Certifique-se de que a API do backend está acessível antes de usar o frontend.
 
