@@ -5,6 +5,16 @@ Projeto dividido em dois repositórios:
 - **Frontend (React.js):** [controle_presenca](https://github.com/iohanjheremy/controle_presenca)
 - **Backend (Symfony):** [backend](https://github.com/iohanjheremy/backend)
 
+- ## 📁 Estrutura do Projeto
+
+/
+├── backend/ # Projeto Symfony
+├── frontend/ # Projeto React (Vite)
+├── docker/ # Configurações customizadas para PHP e Nginx
+│ ├── php/
+│ └── nginx/
+└── docker-compose.yaml
+
 ---
 
 ## 🐳 Como rodar o projeto com Docker
