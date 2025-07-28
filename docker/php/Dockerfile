@@ -25,7 +25,6 @@ RUN apt-get update && apt-get install -y \
     xml \
     ctype \
     iconv \
-    tokenizer \
     dom \
     bcmath
 
