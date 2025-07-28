@@ -52,6 +52,8 @@ API disponível em: http://localhost:8080/api <br>
 Documentação Swagger: http://localhost:8080/api/docs
 <br>
 
+---
+
 🔜 Frontend (React.js)
 📁 Clone o repositório
 ```bash
