@@ -49,6 +49,7 @@ cd ..
 3. Execute o Docker Compose:
 
 ```bash
+cd controle_presenca
 docker-compose up --build -d
 ```
 
