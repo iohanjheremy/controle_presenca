@@ -85,9 +85,6 @@ composer install
 
 # Rodar migrations
 php bin/console doctrine:migrations:migrate
-
-# Rodar servidor Symfony (não necessário, pois usamos nginx)
-symfony server:start
 ```
 
 ### 📄 Variável `.env`
