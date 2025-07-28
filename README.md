@@ -49,6 +49,7 @@ docker exec -it php php bin/console doctrine:migrations:migrate
 docker exec -it php bash
 ```
 ---
+<br><br>
 
 ## 🌐 Endpoints
 API disponível em: http://localhost:8080/api <br>
