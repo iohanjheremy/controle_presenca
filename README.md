@@ -84,6 +84,9 @@ docker exec -it symfony-php bash
 # Instalar dependências
 composer install
 
+#Instalar o Swagger
+composer require nelmio/api-doc-bundle
+
 # Rodar migrations
 php bin/console doctrine:migrations:migrate
 ```
