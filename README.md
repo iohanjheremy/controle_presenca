@@ -19,6 +19,7 @@ Projeto dividido em dois repositórios:
 ## 🔙 Backend (Symfony)
 
 ### 📁 Clone o repositório
+```bash
 
 git clone https://github.com/iohanjheremy/backend.git
 cd backend
@@ -35,7 +36,7 @@ docker exec -it php php bin/console doctrine:migrations:migrate
 
 # Acessar container
 docker exec -it php bash
-
+---
 ```bash
 
 🌐 Endpoints
