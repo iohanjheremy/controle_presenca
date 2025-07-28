@@ -1,29 +1,47 @@
-FROM php:8.3-fpm
+FROM php:8.2-fpm
 
-# Instala dependências e extensões
+# Instalar dependências do sistema
 RUN apt-get update && apt-get install -y \
-    libpq-dev \
-    libzip-dev \
+    git \
     unzip \
     zip \
-    libpng-dev \
+    libicu-dev \
+    libzip-dev \
     libonig-dev \
     libxml2-dev \
-    default-mysql-client \
-    && docker-php-ext-install pdo pdo_mysql
+    libpq-dev \
+    libcurl4-openssl-dev \
+    libxslt1-dev \
+    libjpeg-dev \
+    libpng-dev \
+    libfreetype6-dev \
+    && docker-php-ext-install \
+    intl \
+    pdo \
+    pdo_mysql \
+    zip \
+    opcache \
+    mbstring \
+    xml \
+    ctype \
+    iconv \
+    tokenizer \
+    dom \
+    bcmath
 
-# Instalar Composer
+# Instalar o Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
-COPY --chown=www-data:www-data . /var/www/backend
-
 
 WORKDIR /var/www/backend
 
+# Copiar composer.json e instalar dependências
 COPY backend/composer.json backend/composer.lock* ./
-
 RUN composer install --no-interaction --prefer-dist --optimize-autoloader
 
 # Copiar o restante do projeto
 COPY backend ./
+
+# Ajustar permissões
+RUN chown -R www-data:www-data /var/www/backend
 
 CMD ["php-fpm"]
