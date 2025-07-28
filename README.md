@@ -54,7 +54,6 @@ docker exec -it php bash
 ## 🌐 Endpoints
 API disponível em: http://localhost:8080/api <br>
 Documentação Swagger: http://localhost:8080/api/docs
-<br>
 
 ---
 
