@@ -58,7 +58,7 @@ Documentação Swagger: http://localhost:8080/api/docs
 ---
 
 <br><br>
-🔜 Frontend (React.js)
+## 🔜 Frontend (React.js)
 ### 📁 Clone o repositório
 ```bash
 git clone https://github.com/iohanjheremy/controle_presenca.git
