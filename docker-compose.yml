@@ -1,7 +1,8 @@
 services:
   php:
     build:
-      context: ./docker/php
+      context: .
+      dockerfile: docker/php/Dockerfile
     container_name: symfony-php
     working_dir: /var/www/backend
     volumes:
